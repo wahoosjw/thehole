@@ -59,13 +59,14 @@ public class TheHole {
             pos.set(x, y, z);
             Block block = level.getBlockState(pos).getBlock();
 
-            // Skip air, water, logs, leaves, coral, mushrooms
+            // Skip air, water, logs, leaves, coral, mushrooms, bamboo, sugar cane
             if (block == Blocks.AIR || block == Blocks.WATER) continue;
             String blockStr = block.toString().toLowerCase();
             if (blockStr.contains("leaves") || blockStr.contains("log") ||
                 blockStr.contains("kelp") || blockStr.contains("grass") ||
                 blockStr.contains("tall_grass") || blockStr.contains("mob") ||
-                blockStr.contains("coral") || blockStr.contains("mushroom")) continue;
+                blockStr.contains("coral") || blockStr.contains("mushroom") ||
+                blockStr.contains("bamboo") || blockStr.contains("sugar_cane")) continue;
             System.out.println(block.toString());
 
             // Found the first valid terrain block
@@ -77,28 +78,6 @@ public class TheHole {
 }
 
     public void generateHole(ServerLevel level, int x, int y, int z) {
-        // Define which blocks should be ignored when scanning downward
-        Set<Block> ignorableBlocks = Set.of(
-            Blocks.OAK_LEAVES, Blocks.BIRCH_LEAVES, Blocks.SPRUCE_LEAVES,
-            Blocks.JUNGLE_LEAVES, Blocks.ACACIA_LEAVES, Blocks.DARK_OAK_LEAVES,
-            Blocks.OAK_LOG, Blocks.BIRCH_LOG, Blocks.SPRUCE_LOG,
-            Blocks.JUNGLE_LOG, Blocks.ACACIA_LOG, Blocks.DARK_OAK_LOG,
-            Blocks.WATER
-        );
-
-        int minY = level.getMinY();
-        int maxY = level.getMaxY();
-
-        // Start at the top and search downward until we hit something solid
-        for (int scanY = maxY - 1; scanY >= minY; scanY--) {
-            Block block = level.getBlockState(new BlockPos(x, scanY, z)).getBlock();
-            if (!ignorableBlocks.contains(block)) {
-                y = scanY;
-                break;
-            }
-        }
-
-        // Save location
         // Randomize x and z within ±10
         this.holeX = x + (int)(Math.random() * 21) - 10;
         this.holeZ = z + (int)(Math.random() * 21) - 10;
