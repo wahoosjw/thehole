@@ -1,0 +1,93 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Client",
+      "presentation": {
+        "group": "Mod Development - thehole",
+        "order": 0
+      },
+      "projectName": "thehole",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@C:\\Users\\wahoo\\git_repos\\thehole\\build\\moddev\\clientRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@C:\\Users\\wahoo\\git_repos\\thehole\\build\\moddev\\clientRunVmArgs.txt",
+        "-Dfml.modFolders\u003dthehole%%C:\\Users\\wahoo\\git_repos\\thehole\\bin\\main"
+      ],
+      "cwd": "${workspaceFolder}\\run",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "ClientData",
+      "presentation": {
+        "group": "Mod Development - thehole",
+        "order": 1
+      },
+      "projectName": "thehole",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@C:\\Users\\wahoo\\git_repos\\thehole\\build\\moddev\\clientDataRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@C:\\Users\\wahoo\\git_repos\\thehole\\build\\moddev\\clientDataRunVmArgs.txt",
+        "-Dfml.modFolders\u003dthehole%%C:\\Users\\wahoo\\git_repos\\thehole\\bin\\main"
+      ],
+      "cwd": "${workspaceFolder}\\run",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "GameTestServer",
+      "presentation": {
+        "group": "Mod Development - thehole",
+        "order": 2
+      },
+      "projectName": "thehole",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@C:\\Users\\wahoo\\git_repos\\thehole\\build\\moddev\\gameTestServerRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@C:\\Users\\wahoo\\git_repos\\thehole\\build\\moddev\\gameTestServerRunVmArgs.txt",
+        "-Dfml.modFolders\u003dthehole%%C:\\Users\\wahoo\\git_repos\\thehole\\bin\\main"
+      ],
+      "cwd": "${workspaceFolder}\\run",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Server",
+      "presentation": {
+        "group": "Mod Development - thehole",
+        "order": 3
+      },
+      "projectName": "thehole",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@C:\\Users\\wahoo\\git_repos\\thehole\\build\\moddev\\serverRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@C:\\Users\\wahoo\\git_repos\\thehole\\build\\moddev\\serverRunVmArgs.txt",
+        "-Dfml.modFolders\u003dthehole%%C:\\Users\\wahoo\\git_repos\\thehole\\bin\\main"
+      ],
+      "cwd": "${workspaceFolder}\\run",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    }
+  ]
+}
