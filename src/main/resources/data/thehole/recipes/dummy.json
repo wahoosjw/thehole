@@ -1,0 +1,10 @@
+// src/main/resources/data/thehole/recipes/dummy.json
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "minecraft:dirt" }
+  ],
+  "result": {
+    "item": "minecraft:dirt"
+  }
+}
